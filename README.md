@@ -3,7 +3,9 @@
 ![GitHub](https://img.shields.io/github/license/MateuszPerczak/weather?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/MateuszPerczak/weather?style=flat-square)
 
-![Website preview](./images/app.jpg)
+<p align="center">
+  <img src="./images/app.jpg"  />
+</p>
 
 ## Libraries
 
