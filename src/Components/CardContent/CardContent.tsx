@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import type CardContentComponent from "./CardContent.types";
 
-const CardContent = styled.div`
+const CardContent: CardContentComponent = styled.div`
   width: 100%;
 `;
 

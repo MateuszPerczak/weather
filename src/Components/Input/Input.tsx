@@ -2,7 +2,7 @@ import type { FC } from "react";
 import { useState } from "react";
 import StyledInput, { StyledInputList } from "./Input.style";
 import Icon from "../Icon/Icon";
-import { InputProps } from "./Input.types";
+import type { InputProps } from "./Input.types";
 
 const Input: FC<InputProps> = ({ header, children }): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import type CardComponent from "./Card.types";
 
-const Card = styled.div`
+const Card: CardComponent = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;

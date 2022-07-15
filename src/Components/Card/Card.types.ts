@@ -1,17 +1,8 @@
 import type { Theme } from "@emotion/react";
 import type { StyledComponent } from "@emotion/styled";
-import type {
-  DetailedHTMLProps,
-  ElementType,
-  HTMLAttributes,
-  PropsWithChildren,
-} from "react";
+import type { ElementType, DetailedHTMLProps, HTMLAttributes } from "react";
 
-export type InputProps = PropsWithChildren<{
-  header: string;
-}>;
-
-type InputComponent = StyledComponent<
+type CardComponent = StyledComponent<
   {
     theme?: Theme;
     as?: ElementType;
@@ -20,4 +11,4 @@ type InputComponent = StyledComponent<
   Record<string, unknown>
 >;
 
-export default InputComponent;
+export default CardComponent;

@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
+import type InputComponent from "./Input.types";
 import { motion } from "framer-motion";
 
-const StyledInput = styled.div`
+const StyledInput: InputComponent = styled.div`
   position: relative;
   display: flex;
   align-items: center;
