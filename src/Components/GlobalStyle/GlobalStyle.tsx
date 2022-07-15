@@ -35,7 +35,7 @@ const GlobalStyle: FC = (): JSX.Element => {
         }
         ::-webkit-scrollbar-thumb {
           border-radius: 10px;
-          background-color: ${theme.hamburger};
+          background-color: ${theme.scrollbar};
         }
       `}
     />

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 const StyledInput: InputComponent = styled.div`
   position: relative;
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -12,8 +13,8 @@ const StyledInput: InputComponent = styled.div`
   padding: 10px 15px;
   border-radius: 10px;
   user-select: none;
-  background-color: ${({ theme: { background } }) => {
-    return background;
+  background-color: ${({ theme: { input } }) => {
+    return input;
   }};
 `;
 
@@ -25,15 +26,14 @@ export const StyledInputList = styled(motion.div)`
   flex-direction: column;
   width: 100%;
   gap: 20px;
-  padding: 10px 15px;
   border-radius: 10px;
   user-select: none;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-color: ${({ theme: { background } }) => {
-    return background;
+  background-color: ${({ theme: { input } }) => {
+    return input;
   }};
-  box-shadow: 0 0 15px 0
+  box-shadow: 0 0 20px 0
     ${({ theme: { shadow } }) => {
       return shadow;
     }};

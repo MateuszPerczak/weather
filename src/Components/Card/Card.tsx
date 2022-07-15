@@ -10,12 +10,12 @@ const Card: CardComponent = styled.div`
   padding: 20px;
   border-radius: 10px;
   user-select: none;
-  box-shadow: 0 0 15px 0
+  box-shadow: 0 0 25px 0
     ${({ theme: { shadow } }) => {
       return shadow;
     }};
-  background-color: ${({ theme: { shadow } }) => {
-    return shadow;
+  background-color: ${({ theme: { card } }) => {
+    return card;
   }};
 `;
 

@@ -11,7 +11,7 @@ const Home: LazyExoticComponent<FC> = lazy(
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(import("../../Pages/Home"));
-      }, 5000);
+      }, 2000);
     });
   }
 );
