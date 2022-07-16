@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
-const StyledButton = styled.div`
+const StyledButton = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -25,6 +25,7 @@ const GlobalStyle: FC = (): JSX.Element => {
           display: grid;
           place-items: center;
           box-shadow: inset 0 0 30px 0 ${theme.shadow};
+          overflow: hidden;
         }
         @font-face {
           font-family: "Segoe Fluent Icons";

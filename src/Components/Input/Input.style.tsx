@@ -13,9 +13,15 @@ const StyledInput: InputComponent = styled.div`
   padding: 10px 15px;
   border-radius: 10px;
   user-select: none;
+  transition: background-color 200ms;
   background-color: ${({ theme: { input } }) => {
     return input;
   }};
+  &:active {
+    background-color: ${({ theme: { button } }) => {
+      return button;
+    }};
+  }
 `;
 
 export const StyledInputList = styled(motion.div)`
@@ -25,10 +31,9 @@ export const StyledInputList = styled(motion.div)`
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 20px;
   border-radius: 10px;
   user-select: none;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   background-color: ${({ theme: { input } }) => {
     return input;

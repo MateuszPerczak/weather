@@ -2,30 +2,19 @@
   "light": {
     "background": "#fafafa",
     "color": "#000",
-    "card": "#fafafa",
-    "navbar": "#e1e1e1",
-    "border": "#bababa",
+    "card": "#efefef",
+    "input": "#fafafa",
     "shadow": "#bababa",
-    "hamburger": "#f0f0f0",
-    "header": "#fafafa99",
     "scrollbar": "#e1e1e1",
-    "date": "#222"
+    "button": "#f5f5f5"
   },
   "dark": {
-    "background": "#252525",
+    "background": "#323638",
     "color": "#fff",
-    "card": "#1a1a1a",
-    "input": "#252525",
-    "shadow": "#1a1a1a",
-    "scrollbar": "#333",
-    "button": "#212121",
-
-    "navbar": "#212121",
-    "border": "#3b3b3b",
-
-    "hamburger": "#2a2a2a",
-    "header": "#252525aa",
-
-    "date": "#bbb"
+    "card": "#2a2e30",
+    "input": "#323638",
+    "shadow": "#2a2a2a",
+    "scrollbar": "#555",
+    "button": "#212527"
   }
 }

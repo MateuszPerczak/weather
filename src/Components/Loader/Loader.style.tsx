@@ -7,15 +7,6 @@ const StyledLoader: LoaderComponent = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  font-weight: bold;
-  user-select: none;
-  pointer-events: none;
-  letter-spacing: 0.1rem;
-`;
-
-export const StyledImg = styled(motion.img)`
-  max-width: 150px;
 `;
 
 export default StyledLoader;

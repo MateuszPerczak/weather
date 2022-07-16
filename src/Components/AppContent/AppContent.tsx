@@ -6,22 +6,15 @@ import Loader from "../Loader/Loader";
 import Footer from "../Footer/Footer";
 import { AnimatePresence } from "framer-motion";
 
-const Home: LazyExoticComponent<FC> = lazy(
-  (): Promise<typeof import("../../Pages/Home")> => {
+const Main: LazyExoticComponent<FC> = lazy(
+  (): Promise<typeof import("../../Pages/Main")> => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(import("../../Pages/Home"));
+        resolve(import("../../Pages/Main"));
       }, 2000);
     });
   }
 );
-// const About: LazyExoticComponent<FC> = lazy(
-//   (): Promise<typeof import("../../Pages/About")> => {
-//     return new Promise((resolve) => {
-//       resolve(import("../../Pages/About"));
-//     });
-//   }
-// );
 
 const AppContent: FC = (): JSX.Element => {
   return (
@@ -31,7 +24,7 @@ const AppContent: FC = (): JSX.Element => {
       <Suspense fallback={<Loader />}>
         <AnimatePresence>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Main />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </AnimatePresence>

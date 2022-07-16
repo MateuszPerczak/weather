@@ -14,7 +14,7 @@ const Input: FC<InputProps> = ({ header, children }): JSX.Element => {
       <StyledInputList
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 250 : 0 }}
-        transition={{ type: "spring", mass: 0.5, stiffness: 150, damping: 10 }}
+        transition={{ type: "spring", mass: 0.3, stiffness: 150, damping: 10 }}
         onMouseLeave={() => setIsOpen(false)}
       >
         {isOpen && children}
