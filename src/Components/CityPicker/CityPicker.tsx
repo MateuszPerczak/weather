@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import type CityPickerProps from "./CityPicker.types";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Card from "../Card/Card";
 import CardHeader from "../CardHeader/CardHeader";
 import CardContent from "../CardContent/CardContent";
@@ -24,14 +24,14 @@ const CityPicker: FC<CityPickerProps> = ({
     >
       <Card>
         <CardHeader>
-          <Img src="./images/marker.png" alt="map" />
+          <Img src="./images/Map.webp" alt="Map" />
         </CardHeader>
-        <CardContent>
-          <Input header={city ? city.name : "Choose a city"}>
+        <CardContent alignItems="flex-end">
+          <Input header={city ? city : "Choose a city"}>
             {cities.map((city, index) => {
               return (
                 <InputCity onClick={() => setCity(city)} key={index}>
-                  {city.name}
+                  {city}
                 </InputCity>
               );
             })}
@@ -42,7 +42,7 @@ const CityPicker: FC<CityPickerProps> = ({
               animate={{ opacity: 1, scale: 1 }}
               onClick={() => setPicker(false)}
             >
-              <span>Next</span>
+              <span>Check weather</span>
               <Icon>&#xE00F;</Icon>
             </Button>
           )}

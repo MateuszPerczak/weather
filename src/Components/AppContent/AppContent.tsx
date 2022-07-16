@@ -9,9 +9,7 @@ import { AnimatePresence } from "framer-motion";
 const Main: LazyExoticComponent<FC> = lazy(
   (): Promise<typeof import("../../Pages/Main")> => {
     return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(import("../../Pages/Main"));
-      }, 2000);
+      resolve(import("../../Pages/Main"));
     });
   }
 );

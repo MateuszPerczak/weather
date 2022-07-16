@@ -3,10 +3,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CityPicker from "../Components/CityPicker/CityPicker";
 import CityWeather from "../Components/CityWeather/CityWeather";
-import type { City } from "../Cities/cities";
 
 const Home: FC = (): JSX.Element => {
-  const [city, setCity] = useState<City | null>(null);
+  const [city, setCity] = useState("");
   const [picker, setPicker] = useState(true);
 
   return (

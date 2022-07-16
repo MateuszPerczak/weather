@@ -1,12 +1,13 @@
-import styled from "@emotion/styled";
-import type CardContentComponent from "./CardContent.types";
+import type { FC, PropsWithChildren } from "react";
+import StyledCardContent from "./CardContent.style";
 
-const CardContent: CardContentComponent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-  width: 100%;
-`;
+type CardContentProps = PropsWithChildren<{
+  alignItems: string;
+}>;
 
+const CardContent: FC<CardContentProps> = ({ children, alignItems }) => {
+  return (
+    <StyledCardContent alignItems={alignItems}>{children}</StyledCardContent>
+  );
+};
 export default CardContent;

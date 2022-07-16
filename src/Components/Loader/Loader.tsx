@@ -19,7 +19,7 @@ const Loader: FC = (): JSX.Element => {
           repeatType: "reverse",
         }}
       >
-        <Img src="./images/weather.png" alt="logo" />
+        <Img src="./images/Clear.webp" alt="logo" />
       </motion.div>
     </StyledLoader>
   );
