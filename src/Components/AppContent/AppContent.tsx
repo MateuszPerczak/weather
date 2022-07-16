@@ -22,8 +22,8 @@ const AppContent: FC = (): JSX.Element => {
       <Suspense fallback={<Loader />}>
         <AnimatePresence>
           <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/weather" element={<Main />} />
+            <Route path="*" element={<Navigate to="/weather" />} />
           </Routes>
         </AnimatePresence>
       </Suspense>

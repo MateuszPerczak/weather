@@ -12,7 +12,7 @@ const AppProvider: FC<PropsWithChildren> = ({ children }): JSX.Element => {
   return (
     <ThemeProvider theme={themes[systemTheme]}>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>{children}</BrowserRouter>
+        <BrowserRouter basename="/weather">{children}</BrowserRouter>
       </QueryClientProvider>
     </ThemeProvider>
   );
