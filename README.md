@@ -13,6 +13,8 @@
 - Emotion
 - framer-motion
 - react-router-dom
+- lodash
+- react-query
 
 ## Icons
 
