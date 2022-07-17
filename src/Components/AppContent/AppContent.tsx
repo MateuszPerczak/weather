@@ -14,14 +14,6 @@ const Main: LazyExoticComponent<FC> = lazy(
   }
 );
 
-const About: LazyExoticComponent<FC> = lazy(
-  (): Promise<typeof import("../../Pages/About")> => {
-    return new Promise((resolve) => {
-      resolve(import("../../Pages/About"));
-    });
-  }
-);
-
 const AppContent: FC = (): JSX.Element => {
   return (
     <>
@@ -31,7 +23,6 @@ const AppContent: FC = (): JSX.Element => {
         <AnimatePresence>
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="/about" element={<About />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </AnimatePresence>

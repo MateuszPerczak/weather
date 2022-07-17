@@ -14,6 +14,7 @@ import Data from "../Data/Data";
 import Error from "../Error/Error";
 import Button from "../Button/Button";
 import Icon from "../Icon/Icon";
+import Weather from "../Weather/Weather";
 
 const CityWeather: FC<CityWeatherProps> = ({
   city,
@@ -50,29 +51,17 @@ const CityWeather: FC<CityWeatherProps> = ({
     >
       <Card>
         <CardHeader>
-          <motion.div
-            animate={{
-              y: ["-2%", "2%"],
-            }}
-            transition={{
-              type: "spring",
-              mass: 10,
-              stiffness: 50,
-              damping: 10,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          >
-            <Img
-              src={`./images/${data ? data.weather[0].main : "weather"}.webp`}
-              alt={data ? data.weather[0].main : ""}
-            />
-          </motion.div>
+          <Weather
+            src={`./images/${data ? data.weather[0].main : "weather"}.webp`}
+            alt={data ? data.weather[0].main : ""}
+          />
         </CardHeader>
-        <CardContent alignItems="flex-start">
-          <h1>{data ? data.name : ""}</h1>
-          <h2>{data ? capitalize(data.weather[0].description) : ""}</h2>
-          <DataContainer>
+        <CardContent alignItems="center">
+          <DataContainer flexDirection="column">
+            <h1>{data ? data.name : ""}</h1>
+            <h3>{data ? capitalize(data.weather[0].description) : ""}</h3>
+          </DataContainer>
+          <DataContainer flexDirection="row">
             <Data>
               <Img src="./images/Thermometer.webp" alt="Thermometer" />
               <span>
@@ -88,10 +77,12 @@ const CityWeather: FC<CityWeatherProps> = ({
               <span>{data ? `${data.wind.speed} Km/h` : ""}</span>
             </Data>
           </DataContainer>
-          <Button onClick={() => setPicker(true)}>
-            <Icon>&#xE00E;</Icon>
-            <span>Change city</span>
-          </Button>
+          <DataContainer flexDirection="row">
+            <Button onClick={() => setPicker(true)}>
+              <Icon>&#xE00E;</Icon>
+              <span>Change city</span>
+            </Button>
+          </DataContainer>
         </CardContent>
       </Card>
     </motion.div>

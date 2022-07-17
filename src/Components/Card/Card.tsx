@@ -5,10 +5,14 @@ const Card: CardComponent = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  padding: 20px;
   gap: 20px;
-  padding: 0 20px;
-  min-width: 450px;
-  aspect-ratio: 2/1;
   border-radius: 10px;
   box-shadow: 0 0 25px 0
     ${({ theme: { shadow } }) => {
