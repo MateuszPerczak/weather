@@ -6,8 +6,7 @@ const Card: CardComponent = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     flex-direction: column;
     flex-wrap: wrap;
   }
