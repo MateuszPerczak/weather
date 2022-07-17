@@ -50,7 +50,7 @@ const CityWeather: FC<CityWeatherProps> = ({ city }): JSX.Element => {
             alt={data ? data.weather[0].main : ""}
           />
         </CardHeader>
-        <CardContent alignItems="center">
+        <CardContent alignItems="flex-start">
           <h1>{data ? data.name : ""}</h1>
           <h2>{data ? capitalize(data.weather[0].description) : ""}</h2>
           <DataContainer>

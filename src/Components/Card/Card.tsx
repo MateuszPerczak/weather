@@ -7,7 +7,6 @@ const Card: CardComponent = styled.div`
   align-items: center;
   gap: 20px;
   padding: 0 20px;
-  width: min(90vw, 550px);
   min-width: 450px;
   aspect-ratio: 2/1;
   border-radius: 10px;
