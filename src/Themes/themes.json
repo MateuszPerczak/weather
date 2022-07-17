@@ -9,12 +9,12 @@
     "button": "#f5f5f5"
   },
   "dark": {
-    "background": "#323638",
+    "background": "#212121",
     "color": "#fff",
-    "card": "#2a2e30",
-    "input": "#323638",
-    "shadow": "#2a2a2a",
-    "scrollbar": "#555",
-    "button": "#212527"
+    "card": "#252525",
+    "input": "#212121",
+    "shadow": "#1a1a1a",
+    "scrollbar": "#333",
+    "button": "#2a2a2a"
   }
 }

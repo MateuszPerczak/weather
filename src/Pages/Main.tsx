@@ -17,7 +17,7 @@ const Home: FC = (): JSX.Element => {
         {picker && (
           <CityPicker city={city} setCity={setCity} setPicker={setPicker} />
         )}
-        {!picker && city && <CityWeather city={city} />}
+        {!picker && city && <CityWeather city={city} setPicker={setPicker} />}
       </AnimatePresence>
     </motion.div>
   );

@@ -3,7 +3,7 @@ import type { Dispatch, SetStateAction } from "react";
 type CityPickerProps = {
   city: string;
   setCity: Dispatch<SetStateAction<string>>;
-  setPicker: (picker: boolean) => void;
+  setPicker: Dispatch<SetStateAction<boolean>>;
 };
 
 export default CityPickerProps;

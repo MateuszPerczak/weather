@@ -12,8 +12,13 @@ import Img from "../Img/Img";
 import DataContainer from "../DataContainer/DataContainer";
 import Data from "../Data/Data";
 import Error from "../Error/Error";
+import Button from "../Button/Button";
+import Icon from "../Icon/Icon";
 
-const CityWeather: FC<CityWeatherProps> = ({ city }): JSX.Element => {
+const CityWeather: FC<CityWeatherProps> = ({
+  city,
+  setPicker,
+}): JSX.Element => {
   const { isLoading, error, data } = useQuery<ApiResponse>([city], async () => {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=6967cc85728d1a5a59fa0fdd6086595e`
@@ -45,10 +50,24 @@ const CityWeather: FC<CityWeatherProps> = ({ city }): JSX.Element => {
     >
       <Card>
         <CardHeader>
-          <Img
-            src={`./images/${data ? data.weather[0].main : "weather"}.webp`}
-            alt={data ? data.weather[0].main : ""}
-          />
+          <motion.div
+            animate={{
+              y: ["-2%", "2%"],
+            }}
+            transition={{
+              type: "spring",
+              mass: 10,
+              stiffness: 50,
+              damping: 10,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          >
+            <Img
+              src={`./images/${data ? data.weather[0].main : "weather"}.webp`}
+              alt={data ? data.weather[0].main : ""}
+            />
+          </motion.div>
         </CardHeader>
         <CardContent alignItems="flex-start">
           <h1>{data ? data.name : ""}</h1>
@@ -57,14 +76,22 @@ const CityWeather: FC<CityWeatherProps> = ({ city }): JSX.Element => {
             <Data>
               <Img src="./images/Thermometer.webp" alt="Thermometer" />
               <span>
-                {data ? `${Math.floor(data.main.temp - 273.15)} °C` : ""}
+                {data ? `${Math.floor(data.main.temp - 273.15)}°C` : ""}
               </span>
             </Data>
             <Data>
+              <Img src="./images/Humidity.webp" alt="Humidity" />
+              <span>{data ? `${data.main.humidity}%` : ""}</span>
+            </Data>
+            <Data>
               <Img src="./images/Windsock.webp" alt="Windsock" />
-              <span>{data ? data.wind.speed : ""}</span>
+              <span>{data ? `${data.wind.speed} Km/h` : ""}</span>
             </Data>
           </DataContainer>
+          <Button onClick={() => setPicker(true)}>
+            <Icon>&#xE00E;</Icon>
+            <span>Change city</span>
+          </Button>
         </CardContent>
       </Card>
     </motion.div>
