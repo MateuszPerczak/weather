@@ -58,7 +58,7 @@ const CityWeather: FC<CityWeatherProps> = ({
         </CardHeader>
         <CardContent alignItems="center">
           <DataContainer flexDirection="column">
-            <h1>{data ? data.name : ""}</h1>
+            <h1>{city ? city : ""}</h1>
             <h3>{data ? capitalize(data.weather[0].description) : ""}</h3>
           </DataContainer>
           <DataContainer flexDirection="row">
