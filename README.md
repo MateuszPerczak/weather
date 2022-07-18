@@ -15,6 +15,7 @@
 - react-router-dom
 - lodash
 - react-query
+- react-use-system-theme
 
 ## Icons
 
