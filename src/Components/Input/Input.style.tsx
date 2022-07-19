@@ -28,6 +28,7 @@ export const StyledInputList = styled(motion.div)`
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   width: 100%;

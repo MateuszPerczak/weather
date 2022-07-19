@@ -3,13 +3,13 @@ import Card from "../Card/Card";
 import CardContent from "../CardContent/CardContent";
 import CardHeader from "../CardHeader/CardHeader";
 import DataContainer from "../DataContainer/DataContainer";
-import Weather from "../Weather/Weather";
+import Turtel from "../Weather/Weather";
 
 const Error: FC = (): JSX.Element => {
   return (
     <Card>
       <CardHeader>
-        <Weather src="./images/Turtel.webp" alt="Turtel" />
+        <Turtel src="./images/Turtel.webp" alt="Turtel" />
       </CardHeader>
       <CardContent alignItems="flex-start">
         <DataContainer flexDirection="column">
