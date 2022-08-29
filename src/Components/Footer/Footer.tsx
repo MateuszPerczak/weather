@@ -8,7 +8,7 @@ const Footer: FC = (): JSX.Element => {
     <StyledFooter>
       <span>Mateusz Perczak © 2022</span>
       <Link href="https://github.com/MateuszPerczak">Github</Link>
-      <Link href="https://mateuszperczak.github.io/">Website</Link>
+      <Link href="https://mateuszperczak.netlify.app/">Website</Link>
     </StyledFooter>
   );
 };
