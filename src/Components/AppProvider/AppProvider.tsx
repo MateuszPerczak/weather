@@ -6,7 +6,13 @@ import useSystemTheme from "react-use-system-theme";
 import themes from "../../Themes/themes.json";
 
 const AppProvider: FC<PropsWithChildren> = ({ children }): JSX.Element => {
-  const queryClient = new QueryClient();
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+      },
+    },
+  });
   const systemTheme: keyof typeof themes = useSystemTheme("dark");
 
   return (
