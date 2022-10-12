@@ -19,6 +19,7 @@ const GlobalStyle: FC = (): JSX.Element => {
         body {
           display: flex;
           flex-direction: column;
+          font-family: Poppins;
           background: ${background};
           color: ${color};
           user-select: none;
@@ -26,6 +27,7 @@ const GlobalStyle: FC = (): JSX.Element => {
         }
         #root {
           display: flex;
+          flex-direction: column;
         }
       `}
     />
