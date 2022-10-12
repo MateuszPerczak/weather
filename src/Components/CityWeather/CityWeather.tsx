@@ -2,7 +2,7 @@ import type { FC } from "react";
 import type CityWeatherProps from "./CityWeather.types";
 import type { ApiResponse } from "./CityWeather.types";
 import Loader from "../Loader/Loader";
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import { capitalize } from "lodash";
 import Card from "../Card/Card";
