@@ -23,7 +23,7 @@ export const StyledComboBoxList = styled(motion.div)`
   border-radius: 0.5rem;
   left: 0;
   width: 100%;
-  padding: 1rem;
+  padding: 0.3rem;
   overflow-y: auto;
   background-color: ${({ theme: { background } }) => background};
   border: 1px solid ${({ theme: { card } }) => card};

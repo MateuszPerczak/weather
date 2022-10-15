@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import type { FC, PropsWithChildren } from "react";
+import type { FC } from "react";
 import { useState } from "react";
 import StyledComboBox, { StyledComboBoxList } from "./ComboBox.styles";
 import { faCompass } from "@fortawesome/free-regular-svg-icons";
 import { AnimatePresence } from "framer-motion";
+import type { ComboBoxProps } from "./ComboBox.types";
 
-const ComboBox: FC<PropsWithChildren> = ({ children }): JSX.Element => {
+const ComboBox: FC<ComboBoxProps> = ({ children, text }): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleIsOpen = () => {
@@ -14,7 +15,7 @@ const ComboBox: FC<PropsWithChildren> = ({ children }): JSX.Element => {
 
   return (
     <StyledComboBox onClick={toggleIsOpen}>
-      <span>Select location</span>
+      <span>{text}</span>
       <FontAwesomeIcon icon={faCompass} />
       <AnimatePresence mode="wait">
         {isOpen && (
