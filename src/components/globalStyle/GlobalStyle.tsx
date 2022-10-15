@@ -4,7 +4,7 @@ import type { FC } from "react";
 import useWindowDimensions from "@hooks/useWindowDimensions";
 
 const GlobalStyle: FC = (): JSX.Element => {
-  const { background, color }: Theme = useTheme();
+  const { background, color, accent }: Theme = useTheme();
   const { height } = useWindowDimensions();
   return (
     <Global
@@ -28,6 +28,16 @@ const GlobalStyle: FC = (): JSX.Element => {
         #root {
           display: flex;
           flex-direction: column;
+        }
+        ::-webkit-scrollbar {
+          @media (max-width: 768px) {
+            width: 4px;
+          }
+          width: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background-color: ${accent};
+          border-radius: 0.4rem;
         }
       `}
     />

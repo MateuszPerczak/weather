@@ -11,7 +11,7 @@ const StyledNav = styled.nav`
   color: ${({ theme: { accent } }) => accent};
 `;
 
-export const StyledNavLogo = styled.span`
+export const StyledNavLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

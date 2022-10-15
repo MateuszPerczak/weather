@@ -18,6 +18,7 @@ const themes: Themes = {
     nav: "#1e1e1e",
     accent: "#00ccff",
     card: "#212121",
+    combo: "#212121"
   },
 };
 

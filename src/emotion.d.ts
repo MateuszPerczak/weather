@@ -7,5 +7,6 @@ declare module "@emotion/react" {
     nav: string;
     accent: string;
     card: string;
+    combo: string;
   }
 }
