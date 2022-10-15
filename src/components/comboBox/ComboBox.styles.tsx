@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 
-const StyledComboBox = styled.div`
+const StyledComboBox = styled(motion.div)`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
+  min-width: 8rem;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
@@ -20,11 +21,12 @@ export const StyledComboBoxList = styled(motion.div)`
   flex-direction: column;
   position: absolute;
   top: calc(100% + 0.3rem);
-  border-radius: 0.5rem;
   left: 0;
+  border-radius: 0.5rem;
   width: 100%;
   padding: 0.3rem;
   overflow-y: auto;
+  overflow-x: hidden;
   background-color: ${({ theme: { background } }) => background};
   border: 1px solid ${({ theme: { card } }) => card};
   color: ${({ theme: { color } }) => color};

@@ -14,7 +14,7 @@ const ComboBox: FC<ComboBoxProps> = ({ children, text }): JSX.Element => {
   };
 
   return (
-    <StyledComboBox onClick={toggleIsOpen}>
+    <StyledComboBox onClick={toggleIsOpen} layout="preserve-aspect">
       <span>{text}</span>
       <FontAwesomeIcon icon={faCompass} />
       <AnimatePresence mode="wait">

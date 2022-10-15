@@ -28,6 +28,7 @@ const GlobalStyle: FC = (): JSX.Element => {
         #root {
           display: flex;
           flex-direction: column;
+          overflow-x: hidden;
         }
         ::-webkit-scrollbar {
           @media (max-width: 768px) {

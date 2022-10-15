@@ -11,9 +11,6 @@ const AppContent: FC = (): JSX.Element => {
       <Nav />
       <CardWrapper>
         <Card />
-        <Card />
-        <Card />
-        <Card />
       </CardWrapper>
     </>
   );
