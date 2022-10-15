@@ -11,4 +11,11 @@ const StyledNav = styled.nav`
   color: ${({ theme: { accent } }) => accent};
 `;
 
+export const StyledNavLogo = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+`;
+
 export default StyledNav;
