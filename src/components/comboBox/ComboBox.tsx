@@ -23,7 +23,6 @@ const ComboBox: FC<ComboBoxProps> = ({ children, text }): JSX.Element => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 200 }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ type: "spring", mass: 0.3, stiffness: 150 }}
           >
             {children}
           </StyledComboBoxList>

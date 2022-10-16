@@ -7,7 +7,7 @@ const StyledNav = styled.nav`
   padding: 0.5rem 1rem;
   width: 100%;
   font-weight: bold;
-  @media (max-width: 768px) {
+  @media (max-width: 320px) {
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem;
@@ -21,6 +21,11 @@ export const StyledNavLogo = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
+`;
+
+export const StyledNavChildren = styled.div`
+  display: flex;
+  gap: 0.5rem;
 `;
 
 export default StyledNav;

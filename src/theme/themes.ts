@@ -17,8 +17,11 @@ const themes: Themes = {
     color: "#fff",
     nav: "#1e1e1e",
     accent: "#00ccff",
-    card: "#212121",
-    combo: "#212121"
+    border: "#212121",
+    combo: "#252525",
+    shadow: "#000000aa",
+    hover: "#212121",
+    active: "#212121",
   },
 };
 

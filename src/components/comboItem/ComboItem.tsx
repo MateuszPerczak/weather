@@ -6,7 +6,7 @@ const ComboItem = styled.span`
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   &:hover {
-    background-color: ${({ theme: { combo } }) => combo};
+    background-color: ${({ theme: { hover } }) => hover};
   }
 `;
 

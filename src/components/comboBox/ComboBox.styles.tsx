@@ -13,7 +13,10 @@ const StyledComboBox = styled(motion.div)`
   font-weight: normal;
   position: relative;
   cursor: pointer;
-  background-color: ${({ theme: { background } }) => background};
+  background-color: ${({ theme: { combo } }) => combo};
+  &:active {
+    background-color: ${({ theme: { active } }) => active};
+  }
 `;
 
 export const StyledComboBoxList = styled(motion.div)`
@@ -27,10 +30,10 @@ export const StyledComboBoxList = styled(motion.div)`
   padding: 0.3rem;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: ${({ theme: { background } }) => background};
-  border: 1px solid ${({ theme: { card } }) => card};
+  background-color: ${({ theme: { combo } }) => combo};
+  border: 1px solid ${({ theme: { border } }) => border};
   color: ${({ theme: { color } }) => color};
-  box-shadow: 0 0 1rem #00000022;
+  box-shadow: 0 0 1rem ${({ theme: { shadow } }) => shadow};
 `;
 
 export default StyledComboBox;
