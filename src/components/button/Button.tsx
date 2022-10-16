@@ -7,6 +7,7 @@ const Button = styled.div`
   gap: 1rem;
   padding: 0 0.7rem;
   font-size: 0.8rem;
+  aspect-ratio: 1;
   border-radius: 0.5rem;
   font-weight: normal;
   cursor: pointer;

@@ -4,11 +4,11 @@ const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 8px;
   width: 100%;
   height: 50px;
   opacity: 0.5;
-  padding: 0.5rem;
+  padding: 8px;
 `;
 
 export default StyledFooter;

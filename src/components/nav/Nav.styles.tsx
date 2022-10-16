@@ -1,31 +1,41 @@
 import styled from "@emotion/styled";
 
 const StyledNav = styled.nav`
+  display: grid;
+  place-items: center;
+  background-color: ${({ theme: { nav } }) => nav};
+  color: ${({ theme: { accent } }) => accent};
+`;
+
+export const StyledNavWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   width: 100%;
   font-weight: bold;
-  @media (max-width: 320px) {
+  max-width: 1000px;
+  @media (max-width: 400px) {
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
+    gap: 8px;
+    padding: 16px;
   }
-  background-color: ${({ theme: { nav } }) => nav};
-  color: ${({ theme: { accent } }) => accent};
 `;
 
 export const StyledNavLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 16px;
 `;
 
 export const StyledNavChildren = styled.div`
   display: flex;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  @media (max-width: 400px) {
+    justify-content: center;
+  }
+  gap: 8px;
 `;
 
 export default StyledNav;

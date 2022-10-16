@@ -4,10 +4,11 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 0 0.7rem;
+  gap: 16px;
+  padding: 0 12px;
   font-size: 0.8rem;
-  border-radius: 0.5rem;
+  aspect-ratio: 1;
+  border-radius: 8px;
   font-weight: normal;
   cursor: pointer;
   background-color: ${({ theme: { background } }) => background};
