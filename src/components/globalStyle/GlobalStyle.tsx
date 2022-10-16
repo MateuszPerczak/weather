@@ -32,10 +32,7 @@ const GlobalStyle: FC = (): JSX.Element => {
           overflow-x: hidden;
         }
         ::-webkit-scrollbar {
-          @media (max-width: 768px) {
-            width: 4px;
-          }
-          width: 6px;
+          width: 2px;
         }
         ::-webkit-scrollbar-thumb {
           background-color: ${accent};

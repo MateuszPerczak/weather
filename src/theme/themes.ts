@@ -19,7 +19,7 @@ const themes: Themes = {
     accent: "#00ccff",
     border: "#212121",
     combo: "#252525",
-    shadow: "#000000aa",
+    shadow: "#00000055",
     hover: "#212121",
     active: "#212121",
   },

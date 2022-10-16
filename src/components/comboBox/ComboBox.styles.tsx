@@ -30,6 +30,7 @@ export const StyledComboBoxList = styled(motion.div)`
   padding: 0.3rem;
   overflow-y: auto;
   overflow-x: hidden;
+  z-index: 2;
   background-color: ${({ theme: { combo } }) => combo};
   border: 1px solid ${({ theme: { border } }) => border};
   color: ${({ theme: { color } }) => color};
