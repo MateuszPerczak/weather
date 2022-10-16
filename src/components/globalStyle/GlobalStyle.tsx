@@ -27,6 +27,7 @@ const GlobalStyle: FC = (): JSX.Element => {
         }
         #root {
           display: flex;
+          flex: 1;
           flex-direction: column;
           overflow-x: hidden;
         }
