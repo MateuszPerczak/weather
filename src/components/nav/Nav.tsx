@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ComboBox from "@components/comboBox/ComboBox";
 import { cities } from "@data/cities";
 import Button from "@components/button/Button";
-import ComboItem from "@components/comboItem/ComboItem";
 import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import type { NavProps } from "./Nav.types";
@@ -24,13 +23,7 @@ const Nav: FC<NavProps> = ({ selectedCity, setSelectedCity }): JSX.Element => {
           <span>Weather</span>
         </StyledNavLogo>
         <StyledNavChildren>
-          <ComboBox text={selectedCity}>
-            {cities.map((city, index) => (
-              <ComboItem key={`city-${index}`} onClick={() => setSelectedCity(city)}>
-                {city}
-              </ComboItem>
-            ))}
-          </ComboBox>
+          <ComboBox value={selectedCity} setValue={setSelectedCity} options={cities} />
           <Button>
             <FontAwesomeIcon icon={faSyncAlt} />
           </Button>

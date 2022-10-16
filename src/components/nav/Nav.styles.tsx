@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 const StyledNav = styled.nav`
   display: grid;
   place-items: center;
+  z-index: 1;
   background-color: ${({ theme: { nav } }) => nav};
   color: ${({ theme: { accent } }) => accent};
 `;

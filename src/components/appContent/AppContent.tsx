@@ -6,15 +6,13 @@ import type { FC } from "react";
 import { useState } from "react";
 
 const AppContent: FC = (): JSX.Element => {
-  const [selectedCity, setSelectedCity] = useState<string>("Select location");
+  const [selectedCity, setSelectedCity] = useState<string | null>(null);
 
   return (
     <>
       <GlobalStyle />
       <Nav selectedCity={selectedCity} setSelectedCity={setSelectedCity} />
-      <WeatherProvider>
-        <span>Test</span>
-      </WeatherProvider>
+      <WeatherProvider city={selectedCity} />
       <Footer />
     </>
   );

@@ -1,5 +1,7 @@
-import type { PropsWithChildren } from "react";
+import type { Dispatch, SetStateAction } from "react";
 
-export type ComboBoxProps = PropsWithChildren<{
-    text: string;
-}>;
+export type ComboBoxProps = {
+    value: string | null;
+    setValue: Dispatch<SetStateAction<ComboBoxProps["value"]>>;
+    options: string[];
+};
