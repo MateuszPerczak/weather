@@ -1,5 +1,4 @@
 import type { FC } from "react";
-import { useState } from "react";
 import StyledNav, { StyledNavChildren, StyledNavLogo } from "./Nav.styles";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,12 +6,12 @@ import ComboBox from "@components/comboBox/ComboBox";
 import { cities } from "../../data/cities";
 import Button from "@components/button/Button";
 import ComboItem from "@components/comboItem/ComboItem";
-
 import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import type { NavProps } from "./Nav.types";
+import Link from "@components/link/Link";
 
-const Nav: FC = (): JSX.Element => {
-  const [selectedCity, setSelectedCity] = useState<string>("Select location");
-
+const Nav: FC<NavProps> = ({ selectedCity, setSelectedCity }): JSX.Element => {
   return (
     <StyledNav>
       <StyledNavLogo>
@@ -30,6 +29,9 @@ const Nav: FC = (): JSX.Element => {
         <Button>
           <FontAwesomeIcon icon={faSyncAlt} />
         </Button>
+        <Link href="https://github.com/MateuszPerczak">
+          <FontAwesomeIcon icon={faGithub} />
+        </Link>
       </StyledNavChildren>
     </StyledNav>
   );
