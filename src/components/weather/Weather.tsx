@@ -29,9 +29,9 @@ const Weather: FC<WeatherProps> = ({ city }): JSX.Element => {
       </StyledWeatherCity>
 
       <WeatherTemperature>
-        {Math.round((data?.main.temp ?? 273.15) - 273.15)}&deg;
+        <WeatherIcon />
+        <span>{Math.round((data?.main.temp ?? 273.15) - 273.15)}&deg;</span>
       </WeatherTemperature>
-      {/* <WeatherIcon /> */}
     </StyledWeather>
   );
 };
