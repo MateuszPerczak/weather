@@ -1,8 +1,7 @@
-import type { FC } from "react";
-import StyledWeatherTemperature from "./WeatherTemperature.styles";
+import styled from "@emotion/styled";
 
-const WeatherTemperature: FC = (): JSX.Element => {
-  return <StyledWeatherTemperature>18&deg;</StyledWeatherTemperature>;
-};
+const WeatherTemperature = styled.div`
+  font-size: 6rem;
+`;
 
 export default WeatherTemperature;

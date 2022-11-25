@@ -1,4 +1,3 @@
-import AnimatedBackground from "@components/animatedBackground/AnimatedBackground";
 import Footer from "@components/footer/Footer";
 import GlobalStyle from "@components/globalStyle/GlobalStyle";
 import Nav from "@components/nav/Nav";
@@ -14,7 +13,6 @@ const AppContent: FC = (): JSX.Element => {
   return (
     <>
       <GlobalStyle />
-      <AnimatedBackground />
       <Nav selectedCity={selectedCity} setSelectedCity={setSelectedCity} />
       <QueryClientProvider client={queryClient}>
         <WeatherProvider city={selectedCity} />

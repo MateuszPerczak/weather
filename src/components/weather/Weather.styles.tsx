@@ -12,9 +12,6 @@ const StyledWeather = styled(motion.section)`
 export const StyledWeatherCity = styled(motion.header)`
   font-size: clamp(0.8rem, 5vw, 2rem);
   font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 8px;
-  background-color: ${({ theme: { nav } }) => nav};
 `;
 
 export default StyledWeather;
